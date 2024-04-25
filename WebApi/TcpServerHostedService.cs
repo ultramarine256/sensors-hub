@@ -2,13 +2,13 @@
 
 namespace SensorsHub
 {
-    public class TcpServerHostedService : BackgroundService
+    public class TcpServerHostedServiceReal : BackgroundService
     {
         private TcpServer _server;
 
-        public TcpServerHostedService()
+        public TcpServerHostedServiceReal()
         {
-            _server = new TcpServer("127.0.0.1", 12345); // Set your TCP server's IP and port
+            _server = new TcpServer("127.0.0.1", 5000); // Set your TCP server's IP and port
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
