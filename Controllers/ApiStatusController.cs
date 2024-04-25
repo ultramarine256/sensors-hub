@@ -6,28 +6,25 @@ namespace SensorsHub.Controllers
     [Route("/")]
     public class ApiStatusController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<ApiStatusController> _logger;
+        private readonly IConfiguration _configuration;
 
-        public ApiStatusController(ILogger<ApiStatusController> logger)
+        public ApiStatusController(ILogger<ApiStatusController> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IActionResult Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Ok(new
             {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+                name = "SensorsHub API",
+                version = "1.0.0",
+                buildCounter = "build:counter", //_configuration["build:counter"],
+                deployDateTimeUTC = "deploy:datetime" // _configuration["deploy:datetime"]
+            });
         }
     }
 }

@@ -78,7 +78,8 @@ namespace SensorsHub.Controllers
         }
 
         // Other existing endpoints...
-
+        // Explicitly accepting HTTP methods
+        [AcceptVerbs("GET", "POST")]
         [Route("{*url}", Order = int.MaxValue)]
         public IActionResult CatchAll()
         {
