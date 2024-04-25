@@ -4,21 +4,21 @@ namespace SensorsHub.Controllers
 {
     [ApiController]
     [Route("/")]
-    public class WeatherForecastController : ControllerBase
+    public class ApiStatusController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ApiStatusController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public ApiStatusController(ILogger<ApiStatusController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
