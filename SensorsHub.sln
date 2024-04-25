@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorsHub", "SensorsHub.csproj", "{0BC44C41-A3E9-4CA1-B128-F7FE7C12EB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{E39909C0-CAE0-49E9-B402-EA49ACF4300A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorsHub.Tests", "Tests\SensorsHub.Tests\SensorsHub.Tests.csproj", "{0219E6A5-6DE8-4C65-83E6-9B5E9FB3FC58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0BC44C41-A3E9-4CA1-B128-F7FE7C12EB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BC44C41-A3E9-4CA1-B128-F7FE7C12EB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BC44C41-A3E9-4CA1-B128-F7FE7C12EB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BC44C41-A3E9-4CA1-B128-F7FE7C12EB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39909C0-CAE0-49E9-B402-EA49ACF4300A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39909C0-CAE0-49E9-B402-EA49ACF4300A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39909C0-CAE0-49E9-B402-EA49ACF4300A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39909C0-CAE0-49E9-B402-EA49ACF4300A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0219E6A5-6DE8-4C65-83E6-9B5E9FB3FC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0219E6A5-6DE8-4C65-83E6-9B5E9FB3FC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0219E6A5-6DE8-4C65-83E6-9B5E9FB3FC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0219E6A5-6DE8-4C65-83E6-9B5E9FB3FC58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {479A6B07-0B58-4B97-9BB7-B82D9F49CBBF}
+		SolutionGuid = {5023C560-45F8-44B6-9407-EFB01B24398F}
 	EndGlobalSection
 EndGlobal
