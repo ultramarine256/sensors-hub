@@ -12,7 +12,7 @@ namespace WebApi
         public TcpServerHostedService(ILogger<TcpServerHostedService> logger)
         {
             _logger = logger;
-            _listener = new TcpListener(IPAddress.Loopback, 5000); // Ensure the port matches your test setup
+            _listener = new TcpListener(IPAddress.Loopback, 80); // Ensure the port matches your test setup
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
