@@ -22,12 +22,12 @@ steps:
       performMultiLevelLookup: true
       includePreviewVersions: true # Required for preview versions
   
-  - powershell: |
-     $appSettings = "appsettings.json";
-     (Get-Content $appSettings).replace("-build.counter-", $(Build.BuildId)) | Set-Content $appSettings
-     (Get-Content $appSettings).replace("-deploy.date-time-", [DateTime]::UtcNow.ToString('u')) | Set-Content $appSettings
-    workingDirectory: /
-    displayName: 'Build Counter'
+  # - powershell: |
+  #    $appSettings = "appsettings.json";
+  #    (Get-Content $appSettings).replace("-build.counter-", $(Build.BuildId)) | Set-Content $appSettings
+  #    (Get-Content $appSettings).replace("-deploy.date-time-", [DateTime]::UtcNow.ToString('u')) | Set-Content $appSettings
+  #   workingDirectory: /
+  #   displayName: 'Build Counter'
   
   - task: DotNetCoreCLI@2
     displayName: Restore
